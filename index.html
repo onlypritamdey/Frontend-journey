@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+ 
+  <style>
+   
+    @font-face {
+    font-family: myFirstFont;
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+    }
+   
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        
+    }
+    body{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .main{
+        max-width: 60%;
+        display: flex;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    
+    .result{
+        max-width: 50%;
+        gap: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 30px;
+        padding: 20px;
+        color: white;
+        background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    }
+    .result p{
+        font-weight: 700;
+        text-align: center;
+        color: white;
+        filter: brightness(0.8);
+    }
+    
+    .circle {
+    gap: 0px;
+    margin: 20px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    }
+    .circle p,.circle span{
+        margin: 0;
+    }
+    h2{
+        font-weight: 800;
+    }
+    span{
+        font-size: 50px;
+        font-weight: 900;
+    }
+    
+    
+    
+    
+    
+    .summary{
+       padding: 10px;
+       gap: 15px;
+       display: flex;
+       flex-direction: column;
+       
+    }
+    
+    #title{
+        font-weight: 700;
+        width: 100%;
+        text-align: start;
+    } 
+    .tab-container{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .tab{
+        border-radius: 10px;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .tab,.icon{
+        display: flex;
+        align-items: center;
+        
+    }
+    img{
+        display: inline-block;
+        width: 100%;
+        
+    }
+    .tab p1{
+        color: black;
+    }
+    .tab p2{
+        color: grey;
+    }
+    #t1 {
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 10%);
+    }
+
+    #t2 {
+    color: hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%, 10%);
+    }
+
+    #t3 {
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 10%);
+    }
+
+    #t4 {
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 10%);
+    }
+ 
+    button{
+        color: white;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: hsl(224, 30%, 27%);
+    }
+    button:hover{
+        background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+ 
+ @media (max-width: 768px) {
+ 
+ body{
+     width: 100%;
+     
+ }
+ 
+ .main{
+     border-radius: 0;
+     min-width: 100%;
+     height: 100%;
+     justify-content: start;
+     flex-direction: column;
+ }
+ .result,.summary{
+     min-width: 100%;
+ }
+ .result {
+     border-radius: 0 0 30px 30px;
+ }
+ .tab,button{
+     padding: 10px 20px;
+ }
+
+  </style>
+</head>
+<body>
+
+<div class="main">
+
+<div class="result">
+    
+  <p class="title">Your Result</p>
+  <div class="circle">
+      <span>76</span>
+  <p>of 100</p>
+  </div>
+  
+  <h2>Great</h2>
+  <p>You scored higher than 65% of the people who have taken these tests.</p>
+  
+</div>
+
+<div class="summary">
+      
+  <p id="title">Summary</p>
+  
+  <div class="tab-container">
+      <div class="tab" id="t1">
+      <div class="icon">
+          <img src="./assets/images/icon-reaction.svg" alt="r" />
+          <p>Reaction</p>
+      </div>
+      <p1>80 <p2>/ 100</p2></p1> 
+  </div>
+  <div class="tab" id="t2">
+      <div class="icon">
+          <img src="./assets/images/icon-memory.svg" alt="m" />
+          <p>Memory</p>
+      </div>
+      <p1>92 <p2>/ 100</p2></p1>
+  </div>
+  <div class="tab" id="t3">
+      <div class="icon">
+          <img src="./assets/images/icon-verbal.svg" alt="v" />
+          <p>Verbal</p>
+      </div>
+      <p1>62 <p2>/ 100</p2></p1>
+  </div>
+  <div class="tab" id="t4">
+      <div class="icon">
+          <img src="./assets/images/icon-visual.svg" alt="s" />
+          <p>Visual</p>
+      </div>
+      <p1>72 <p2>/ 100</p2></p1>
+  </div>
+  </div>
+  
+  
+  <button type="submit">Continue</button>
+
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Pritam dey</a>.
+  </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
